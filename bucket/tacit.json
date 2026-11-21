@@ -1,0 +1,26 @@
+{
+    "version": "1.0.0",
+    "description": "Local-first, transparent personal memory system for AI coding clients over MCP.",
+    "homepage": "https://github.com/kearril/tacit-memory",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kearril/tacit-memory/releases/download/v1.0.0/tacit-1.0.0-win-x64.zip",
+            "hash": "e04736033e1e8f3a8ac4a8ffd101071dbdd6d5d5d3235c17c0c59df3575caf55"
+        }
+    },
+    "bin": "tacit.exe",
+    "checkver": {
+        "github": "https://github.com/kearril/tacit-memory"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kearril/tacit-memory/releases/download/v$version/tacit-$version-win-x64.zip",
+                "hash": {
+                    "url": "$url.sha256"
+                }
+            }
+        }
+    }
+}
